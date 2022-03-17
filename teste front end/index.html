@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>A Web Pag</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="texto_central">Consulta Cep</h1>
+        <form>
+            <div class="form-group">
+                <label class="cep">Cep</label>
+                <input type="text" placeholder="Ex: 00000-000" class="form-control" maxlength="9" id="cep" required="required" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <button id="send">Consultar CEP</button>
+            </div>
+            <div>
+                <input id="bairro"  class="form-control info" disabled></input>
+                <input id="localidade" class="form-control info" disabled></input>
+                <input id="logradouro" class="form-control info" disabled></input>
+                <input id="uf" class="form-control info" disabled></input>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
